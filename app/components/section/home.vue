@@ -9,11 +9,12 @@
         </div>
         <section class="absolute top-0 left-0 w-full min-h-1/2 md:h-2/3 overflow-hidden   ">
             <div class="rounded-full w-[500px] h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 absolute 
-               left-1/2 blur-2xl">
+               md:right-0 bottom-0  max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 blur-2xl animate-pulse">
             </div>
-           
-            <div class=" w-full overflow-hidden  h-full  bg-[#ffffff]/10 backdrop-blur-[5px]  grid md:grid-cols-2 grid-cols-1 ">
-                <div class="flex flex-col p-10 justify-center gap-4 items-start pl-10">
+
+            <div
+                class=" w-full overflow-hidden  h-full  bg-[#ffffff]/10 backdrop-blur-[5px]  grid md:grid-cols-2 grid-cols-1 ">
+                <div class="flex flex-col p-20 justify-center gap-4 items-start pl-10">
                     <h1 class="text-4xl  font-bold text-white animate-bounce">Hi, I’m Anurag</h1>
                     <h2
                         class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r  from-[#5DFFFF] from-10%  to-[#c72a81] to-70% ">
@@ -22,13 +23,14 @@
                         responsive and user-friendly websites & app. I focus on clean code and efficient design,
                         ensuring seamless interactions that align with both user expectations and business objectives.
                     </p>
-                 <UiButton path="#contact">
-                  <span class="text-white">  Contact Me</span>
-                 </UiButton>
+                    <UiButton path="#contact">
+                        <span class="text-white"> Contact Me</span>
+                    </UiButton>
                 </div>
 
-                <div class="" >
-                    <img class="object-cover md:w-full w-[400px] mx-auto h-full" src="/images/profile.png" alt="">
+                <div class="relative group">
+                  
+                    <img class="object-cover group md:w-full w-[400px] mx-auto h-full" src="/images/profile.png" alt="">
                 </div>
             </div>
         </section>
