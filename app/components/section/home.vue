@@ -1,5 +1,5 @@
 <template>
-    <main class=" min-h-screen relative ">
+    <main class=" min-h-[100vh] md:min-h-[70vh] relative ">
 
         <div class="absolute top-0 left-0 w-full h-full ">
 
@@ -7,7 +7,7 @@
                 <div v-for="_ in 100" class="border border-[#ffffff]/20 opacity-15  "></div>
             </div>
         </div>
-        <section class="absolute top-0 left-0 w-full min-h-1/2 md:h-2/3 overflow-hidden   ">
+        <section class="absolute top-0 left-0 w-full  h-full overflow-hidden   ">
             <div class="rounded-full w-[500px] h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 absolute 
                md:right-0 bottom-0  max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 blur-2xl animate-pulse">
             </div>
