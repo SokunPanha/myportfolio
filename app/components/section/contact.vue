@@ -4,11 +4,11 @@
             <UiTextGradient>Contact</UiTextGradient>
         </div>
 
-        <main class="grid md:grid-cols-2 grid-cols-1 md:gap-30 gap-10">
+        <main class="grid md:grid-cols-2 items-center grid-cols-1 md:gap-20 gap-10">
             <div>
                 <div class="flex flex-col gap-4">
                     <h1 class=" text-2xl font-bold text-blue-400 animate-bounce"> Get in touch</h1>
-                    <p class="text-[14px] text-white">
+                    <p class="text-[20px] text-white">
                         I'm always open to new opportunities and collaborations. Whether you have a project in mind or
                         just want to chat, feel free to reach out!
                     </p>
