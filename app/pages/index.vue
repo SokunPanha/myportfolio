@@ -2,4 +2,5 @@
     <SectionHome/>
     <SectionAbout/>
     <SectionRecentWork/>
+    <SectionContact/>
 </template>
