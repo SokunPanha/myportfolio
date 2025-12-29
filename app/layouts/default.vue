@@ -1,6 +1,6 @@
 <template>
-    <main class="bg-[#100327] p-2 ">
-     <div class="md:max-w-[1280px] w-full mx-auto">
+    <main class="bg-[#13052c] p-2 ">
+     <div class="md:max-w-[1080px] w-full mx-auto h-full">
            <nav class="w-full rounded-t-lg bg-[#ffffff]/10 backdrop-blur-[5px]  sticky top-0 z-50  text-white ">
             <ul class="flex justify-center items-center md:gap-10 gap-4 ">
                 <li class="p-2">
@@ -13,7 +13,7 @@
                   t
                 </div>
                   <li class="p-2">
-                    <NuxtLink to="/work">Work</NuxtLink>
+                    <NuxtLink to="#work">Work</NuxtLink>
                 </li>
                   <li class="p-2">
                     <NuxtLink to="/contact">Contact</NuxtLink>
