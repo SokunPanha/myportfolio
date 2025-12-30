@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20" id="work">
+    <section class="py-20" >
         <div class="flex justify-center items-center">
             <UiTextGradient>Recent Work</UiTextGradient>
         </div>
