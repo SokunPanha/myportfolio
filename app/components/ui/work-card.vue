@@ -5,7 +5,9 @@ interface Project {
     github?: string
     demo?: string
     technologies?: string[]
-    image?: string
+    image?: string,
+    type?: string,
+    process?: string
 }
 
 defineProps<{
@@ -21,23 +23,25 @@ defineProps<{
     transition-transform duration-300 ease-out
     hover:scale-105 hover:rotate-x-6 hover:rotate-y-3
   "
->        <div class="flex  text-white md:gap-5 flex-col"
+>        <div class="flex  text-white md:gap-5 flex-col md:w-1/2"
             :class="index % 2 === 0 ? 'md:order-2 order-2 md:items-end md:hover:transform-3d md:hover:-rotate-3 md:hover:skew-x-2' : 'md:order-1 order-2 items-start hover:transform-3d hover:-rotate-3 hover:skew-x-2'">
-            <div>
-                <h3 class="text-[10px] md:text-[12px] text-indigo-500">Project Name</h3>
+            <div class="">
+                 <h3 class="text-[10px] md:text-[12px] text-indigo-500">{{ project?.type }}</h3>
                 <h1 class="text-md md:text-[20px]">{{ project.name }}</h1>
             </div>
             <div
-                class=" bg-gradient-to-r md:text-[14px] text-[13px] from-black/40 via-black/40 to-indigo-900 p-2  rounded-lg">
+                class=" bg-gradient-to-r md:text-[14px] text-[13px] from-black/40 via-black/40 to-indigo-900 p-2  rounded-lg relative">
                 <p>{{ project.description }}</p>
+                <h1 class="text-[10px] md:text-[12px] text-white absolute -bottom-7 rounded-sm right-2 bg-blue-500 px-2">{{ project?.process }}</h1>
+
                 <div class="flex gap-2 mt-3">
                     <p v-for="technology in project.technologies" :key="technology"
-                        class="bg-white/20 text-[10px] backdrop-blur-[5px] p-1 rounded">{{ technology }}
+                        class="bg-white/20 text-[10px]  p-1 rounded">{{ technology }}
                     </p>
                 </div>
             </div>
             <div>
-                <a :href="project.github" target="_blank">
+                <a :href="project.github" target="_blank" v-if="project.github">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
                         viewBox="0,0,256,256">
                         <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -55,15 +59,16 @@ defineProps<{
             </div>
         </div>
 
-        <div :class="index % 2 === 0 ? 'md:order-1 order-1' : 'md:order-2 order-1'"
-            class="md:hover:scale-105 md:rotate-1 w-full relative  md:hover:skew-y-1 transition-all duration-300">
-            <div class="absolute top-0 left-0 w-full h-full bg-black/50 cursor-pointer z-10 hover:opacity-100 opacity-0">
-                <div class="flex justify-center items-center h-full">
-                    <UiTextGradient>View Project</UiTextGradient>
-                </div>
-            </div>
+        <div :class="index % 2 === 0 ? 'md:order-1 order-1 ' : 'md:order-2 order-1'"
+            class="md:hover:scale-105 md:rotate-1  md:w-1/2   relative  md:hover:skew-y-1 transition-all duration-300">
             <a :href="project.demo" target="_blank">
-                <div class="rounded-lg md:h-1/2 overflow-hidden bg-white">
+                <div class="absolute top-0 left-0 w-full h-full bg-black/50 cursor-pointer z-10 hover:opacity-100 opacity-0">
+                    <div class="flex justify-center items-center h-full">
+                        <UiTextGradient>View Project</UiTextGradient>
+                    </div>
+                </div>
+          
+                <div class="rounded-lg md:h-1/2  overflow-hidden bg-white">
                     <img :src="project.image" alt="" class="w-full h-full object-cover">
                 </div>
             </a>

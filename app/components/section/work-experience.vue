@@ -14,7 +14,7 @@
 
         <main class="flex flex-col md:gap-5 gap-0 mt-10 ">
             <div v-for="(work, index) in workExperience" :key="index">
-                <div class="flex justify-center h-[50px]" v-if="index !== workExperience.length && index !== 0">
+                <div class="flex justify-center md:hidden  h-[50px]" v-if="index !== workExperience.length && index !== 0">
                     <div class="w-[5px] bg-gradient-to-b from-indigo-500  to-pink-500/20 z-10">
 
                     </div>
