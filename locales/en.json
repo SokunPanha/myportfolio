@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "title": "Front-end Developer",
+    "description": "I'm a passionate software developer with 2 years of experience as a Frontend Developer and 1 year of experience as a Backend Developer. I enjoy building modern, user-friendly interfaces and developing reliable, scalable backend systems. I'm always eager to learn new technologies and improve my skills through real-world projects.",
+    "contactBtn": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a Frontend Web Developer with strong experience in modern frameworks such as React, Next.js, Vue, and Nuxt, focused on building responsive, scalable, and user-friendly interfaces. I have working knowledge of backend development, primarily with NestJS, which allows me to collaborate effectively across the stack and build well-integrated frontend solutions. I specialize in UI development and design systems using Tailwind CSS, Ant Design, and shadcn/ui, and I am comfortable working with PostgreSQL, Docker, Git, and Figma to deliver clean, production-ready applications."
+  },
+  "workExperience": {
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "title": "Frontend Developer",
+        "company": "White Sand Casino",
+        "date": "Nov 2024 - Present",
+        "description": "Fully developed and maintained the admin page as well as the entire official website, overseeing all aspects of design, functionality, and performance. Ensured a seamless user experience, optimized code for scalability and maintainability, implemented best practices for security, and collaborated with stakeholders to meet business requirements and continuously improve the platform."
+      },
+      {
+        "title": "Full-Stack Developer",
+        "company": "Sala Tech",
+        "date": "Aug 2024 - Nov 2024",
+        "description": "Worked on both frontend and backend development to build a student portal and supporting admin features using the latest technologies, ensuring scalability, performance, and a smooth user experience. Additionally, led and mentored interns in developing a free tool project under Sala Tech, guiding them through system design, implementation, and best development practices to successfully deliver the project."
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "TSD - Technology Solution Development",
+        "date": "June 2024 - July 2024",
+        "description": "Developed a modern single-page web application for TSD using contemporary frontend technologies, delivering a responsive and high-performance digital menu solution for restaurant operations. Implemented interactive UI components, optimized the application for fast load times, ensured cross-device compatibility, and collaborated with stakeholders to meet functional requirements and enhance the overall user experience."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Recent Work",
+    "viewProject": "View Project",
+    "items": [
+      {
+        "name": "DevToolbox",
+        "description": "A comprehensive collection of 100+ free, client-side developer tools for formatting, encoding, converting, and analyzing data. Features include JSON/XML formatters, Base64 encoders, hash generators, image compression, PDF tools, and more. All processing happens in the browser - your data never leaves your device.",
+        "type": "Personal Project",
+        "process": "Finished"
+      },
+      {
+        "name": "Algo Viz",
+        "description": "An interactive algorithm visualization platform designed to help users understand data structures and algorithms through step-by-step animations and visual explanations. I developed this website using Vibe Coding and Client-Side Rendering (CSR), applying modern frontend techniques to create a smooth, responsive, and engaging learning experience for users.",
+        "type": "Personal Project",
+        "process": "Finished"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "heading": "Get in touch",
+    "description": "I'm always open to new opportunities and collaborations. Whether you have a project in mind or just want to chat, feel free to reach out!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again.",
+      "required": "Please fill in all fields"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

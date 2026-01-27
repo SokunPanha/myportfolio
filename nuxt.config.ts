@@ -5,7 +5,28 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['@/assets/css/main.css'],
+  modules: ['@nuxtjs/i18n'],
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'km', name: 'ភាសាខ្មែរ', file: 'km.json' },
+      { code: 'zh', name: '中文', file: 'zh.json' }
+    ],
+    defaultLocale: 'en',
+    lazy: true,
+    langDir: '../locales',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  },
   vite:{
     plugins: [tailwindcss()]
+  },
+  runtimeConfig: {
+    mailUser: process.env.MAIL_USER || '',
+    mailPassword: process.env.MAIL_PASSWORD || ''
   }
 })

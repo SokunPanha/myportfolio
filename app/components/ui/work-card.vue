@@ -14,6 +14,8 @@ defineProps<{
     index: number
     project: Project
 }>()
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -64,10 +66,10 @@ defineProps<{
             <a :href="project.demo" target="_blank">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/50 cursor-pointer z-10 hover:opacity-100 opacity-0">
                     <div class="flex justify-center items-center h-full">
-                        <UiTextGradient>View Project</UiTextGradient>
+                        <UiTextGradient>{{ t('projects.viewProject') }}</UiTextGradient>
                     </div>
                 </div>
-          
+
                 <div class="rounded-lg md:h-1/2  overflow-hidden bg-white">
                     <img :src="project.image" alt="" class="w-full h-full object-cover">
                 </div>

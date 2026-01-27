@@ -1,6 +1,23 @@
+<script setup>
+const { t, tm, rt } = useI18n()
+
+const jobs = computed(() => {
+    const messages = tm('workExperience.jobs')
+    if (Array.isArray(messages)) {
+        return messages.map(job => ({
+            title: rt(job.title),
+            company: rt(job.company),
+            date: rt(job.date),
+            description: rt(job.description)
+        }))
+    }
+    return []
+})
+</script>
+
 <template>
-    <section id="work" class="py-20 relative">
-        <div class="rounded-full z-0 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 absolute 
+    <section id="work" class="py-20 relative overflow-hidden">
+        <div class="rounded-full z-0 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 absolute
                md:right-0 top-1/2 -translate-y-1/2 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 blur-3xl ">
         </div>
         <div class="absolute top-0 left-0 w-full h-full ">
@@ -9,12 +26,12 @@
             </div>
         </div>
         <div class="flex justify-center items-center h-full">
-            <UiTextGradient>Work Experience</UiTextGradient>
+            <UiTextGradient>{{ t('workExperience.title') }}</UiTextGradient>
         </div>
 
         <main class="flex flex-col md:gap-5 gap-0 mt-10 ">
-            <div v-for="(work, index) in workExperience" :key="index">
-                <div class="flex justify-center md:hidden  h-[50px]" v-if="index !== workExperience.length && index !== 0">
+            <div v-for="(work, index) in jobs" :key="index">
+                <div class="flex justify-center md:hidden  h-[50px]" v-if="index !== jobs.length && index !== 0">
                     <div class="w-[5px] bg-gradient-to-b from-indigo-500  to-pink-500/20 z-10">
 
                     </div>
@@ -38,9 +55,9 @@
                         </div>
 
                         <div class="md:w-2/3 w-full">
-                            <h1 class="text-lg font-bold text-orange-300 max-md:w-2/3">{{ work.company }}</h1>
-                            <h2 class="text-md text-indigo-300 font-bold ">{{ work.title }}</h2>
-                            <p class="text-white/70 text-justify">{{ work.description }}</p>
+                            <h1 class="text-base md:text-lg font-bold text-orange-300 max-md:w-2/3">{{ work.company }}</h1>
+                            <h2 class="text-sm md:text-base text-indigo-300 font-bold">{{ work.title }}</h2>
+                            <p class="text-sm md:text-base text-white/70 text-justify">{{ work.description }}</p>
                         </div>
                     </div>
                 </div>
@@ -49,7 +66,3 @@
         </main>
     </section>
 </template>
-<script setup>
-import { useFetchWorkExperience } from '~/compossables/recent-work/useFetchWorkExperience';
-const { workExperience } = useFetchWorkExperience()
-</script>

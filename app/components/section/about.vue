@@ -1,34 +1,16 @@
 <script setup>
-const images = [
-  'html.webp',
-  'css.webp',
-  'tailwind.webp',
-  'javascript.webp',
-  'typescript.webp',
-  'git.webp',
-  'figma.webp',
-  'react.webp',
-  'nextjs.webp',
-  'vuejs.webp',
-  'nuxt.webp',
-  'ant.webp',
-  'shadcn.webp',
-  'nestjs.webp',
-  'postgres.webp',
-  'docker.webp'
-]
 import { useFetchAboutMe } from '~/compossables/recent-work/useFetchAboutMe';
 const { aboutMe } = useFetchAboutMe()
-
+const { t } = useI18n()
 </script>
 
 <template>
   <section class="py-20" id="about">
     <!-- Title -->
     <div class="flex flex-col items-center gap-3 text-center">
-      <UiTextGradient>About Me</UiTextGradient>
-      <p class="text-white/70 max-w-[90%] md:max-w-[60%]">
-        {{ aboutMe.description }}
+      <UiTextGradient>{{ t('about.title') }}</UiTextGradient>
+      <p class="text-sm md:text-base text-white/70 max-w-[90%] md:max-w-[60%]">
+        {{ t('about.description') }}
       </p>
     </div>
 
