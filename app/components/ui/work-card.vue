@@ -71,7 +71,7 @@ const { t } = useI18n()
                 </div>
 
                 <div class="rounded-lg md:h-1/2  overflow-hidden bg-white">
-                    <img :src="project.image" alt="" class="w-full h-full object-cover">
+                    <NuxtImg :src="project.image" loading="lazy" alt="" class="w-full h-full object-cover"/>
                 </div>
             </a>
         </div>

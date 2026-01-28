@@ -31,8 +31,8 @@ watch(greetingComplete, (complete) => {
             </div>
 
             <div
-                class=" w-full  overflow-hidden  h-full  bg-[#ffffff]/10 backdrop-blur-[5px]  grid md:grid-cols-2 grid-cols-1 ">
-                <div class="flex flex-col md:p-20 p-5 text-justify justify-center gap-4 items-start md:pl-10">
+                class=" w-full  overflow-hidden  h-full  bg-[#ffffff]/10 backdrop-blur-[5px]   grid md:grid-cols-2 grid-cols-1 ">
+                <div class="flex flex-col md:p-20 p-5 text-justify md:justify-start justify-center  gap-4  items-start md:pl-10">
                     <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white hero-animate anim-delay-100">
                         {{ typedGreeting }}<span class="typing-cursor" v-if="!greetingComplete">|</span>
                     </h1>
@@ -49,8 +49,7 @@ watch(greetingComplete, (complete) => {
                 </div>
 
                 <div class="relative group hero-animate-right anim-delay-300">
-
-                    <img class="object-cover group md:w-full w-[400px] mx-auto h-full" src="/images/profile.png" alt="">
+                    <NuxtImg loading="lazy" class="object-cover group md:w-full w-[400px] mx-auto h-full" src="/images/profile-image.webp" alt=""/>
                 </div>
             </div>
         </section>

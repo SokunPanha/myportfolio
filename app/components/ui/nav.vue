@@ -28,7 +28,7 @@ function getFlag(code: string) {
 </script>
 
 <template>
-    <nav class="w-full rounded-t-lg bg-[#ffffff]/10 backdrop-blur-[5px] sticky top-0 z-50 text-white">
+    <nav class="w-full rounded-t-lg bg-[#ffffff]/10 backdrop-blur-[5px] sticky top-0 left-0 z-50 text-white">
         <div class="flex justify-between items-center px-4 md:px-10">
             <!-- Navigation Links -->
             <ul class="flex items-center md:gap-10 gap-4 flex-1 justify-center">
