@@ -25,8 +25,11 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()]
   },
   runtimeConfig: {
-    mailUser: process.env.MAIL_USER || '',
-    mailPassword: process.env.MAIL_PASSWORD || ''
+    public: {
+      emailjsServiceId: process.env.EMAILJS_SERVICE_ID || '',
+      emailjsTemplateId: process.env.EMAILJS_TEMPLATE_ID || '',
+      emailjsPublicKey: process.env.EMAILJS_PUBLIC_KEY || '',
+    }
   },
   routeRules: {
     '/': {prerender: true}

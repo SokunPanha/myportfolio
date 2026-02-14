@@ -1,5 +1,8 @@
 <script setup>
+import emailjs from '@emailjs/browser'
+
 const { t } = useI18n()
+const config = useRuntimeConfig()
 
 const form = ref({
     name: '',
@@ -22,17 +25,35 @@ async function handleSubmit() {
     statusMessage.value = ''
 
     try {
-        await $fetch('/api/contact', {
-            method: 'POST',
-            body: form.value
-        })
+        await emailjs.send(
+            config.public.emailjsServiceId,
+            config.public.emailjsTemplateId,
+            {
+                from_name: form.value.name,
+                from_email: form.value.email,
+                message: form.value.message,
+                message_html: `<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                    <h2 style="color: #6366f1;">New Contact Form Submission</h2>
+                    <div style="background: #f3f4f6; padding: 20px; border-radius: 8px;">
+                        <p><strong>Name:</strong> ${form.value.name}</p>
+                        <p><strong>Email:</strong> ${form.value.email}</p>
+                        <p><strong>Message:</strong></p>
+                        <p style="white-space: pre-wrap;">${form.value.message}</p>
+                    </div>
+                    <p style="color: #6b7280; font-size: 12px; margin-top: 20px;">
+                        This message was sent from your portfolio contact form.
+                    </p>
+                </div>`,
+            },
+            config.public.emailjsPublicKey
+        )
 
         isSuccess.value = true
         statusMessage.value = t('contact.form.success')
         form.value = { name: '', email: '', message: '' }
     } catch (error) {
         isSuccess.value = false
-        statusMessage.value = error?.data?.statusMessage || t('contact.form.error')
+        statusMessage.value = t('contact.form.error')
     } finally {
         isLoading.value = false
     }
