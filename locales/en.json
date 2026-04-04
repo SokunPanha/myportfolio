@@ -54,6 +54,12 @@
         "description": "An interactive algorithm visualization platform designed to help users understand data structures and algorithms through step-by-step animations and visual explanations. I developed this website using Vibe Coding and Client-Side Rendering (CSR), applying modern frontend techniques to create a smooth, responsive, and engaging learning experience for users.",
         "type": "Personal Project",
         "process": "Finished"
+      },
+      {
+        "name": "Blog Post",
+        "description": "A comprehensive resource platform for the Cambodian developer community, providing open-source projects, technical documentation, and web development tools. It aims to foster collaboration and knowledge sharing among local programmers to advance the digital ecosystem in Cambodia.",
+        "type": "Personal Project",
+        "process": "Finished"
       }
     ]
   },

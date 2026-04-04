@@ -33,7 +33,7 @@ useSeoMeta({
     ogType: 'website',
     ogImage: '/images/profile-image.webp',
     twitterCard: 'summary_large_image',
-    twitterImage: '/images/profile-image.webp',    
+    twitterImage: '/images/profile-image.webp',
 })
 </script>
 
