@@ -26,13 +26,13 @@ watch(greetingComplete, (complete) => {
             </div>
         </div>
         <section class="absolute top-0 left-0 w-full  h-full overflow-hidden   ">
-            <div class="rounded-full w-[500px] h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 absolute
+            <div class="rounded-full w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 absolute
                md:right-0 bottom-0  max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 blur-2xl animate-pulse hero-animate-scale anim-delay-100">
             </div>
 
             <div
                 class=" w-full  overflow-hidden  h-full  bg-[#ffffff]/10 backdrop-blur-[5px]   grid md:grid-cols-2 grid-cols-1 ">
-                <div class="flex flex-col md:p-20 p-5 text-justify md:justify-start justify-center  gap-4  items-start md:pl-10">
+                <div class="flex flex-col md:p-20 p-4 sm:p-5 text-justify md:justify-start justify-center gap-3 sm:gap-4 items-start md:pl-10">
                     <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white hero-animate anim-delay-100">
                         {{ typedGreeting }}<span class="typing-cursor" v-if="!greetingComplete">|</span>
                     </h1>
@@ -48,8 +48,8 @@ watch(greetingComplete, (complete) => {
                     </div>
                 </div>
 
-                <div class="relative group hero-animate-right anim-delay-300">
-                    <NuxtImg loading="lazy" class="object-cover group md:w-full w-[400px] mx-auto h-full" src="/images/profile-image.webp" alt=""/>
+                <div class="relative group hero-animate-right anim-delay-300 ">
+                    <NuxtImg loading="lazy" class="object-cover group w-full h-full  mx-auto" src="/images/profile-image.webp" alt=""/>
                 </div>
             </div>
         </section>

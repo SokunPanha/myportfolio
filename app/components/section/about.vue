@@ -15,7 +15,7 @@ const { t } = useI18n()
     </div>
 
     <!-- ORBIT -->
-    <div class="flex justify-center mt-16  p-10  max-md:overflow-hidden ">
+    <div class="flex justify-center mt-16 p-4 sm:p-6 md:p-10 max-md:overflow-hidden">
       <div class="relative">
 
         <!-- Rotating ring -->

@@ -22,7 +22,7 @@
       {
         "title": "Frontend Developer",
         "company": "White Sand Casino",
-        "date": "Nov 2024 - Present",
+        "date": "Nov 2024 - Feb 2025",
         "description": "Fully developed and maintained the admin page as well as the entire official website, overseeing all aspects of design, functionality, and performance. Ensured a seamless user experience, optimized code for scalability and maintainability, implemented best practices for security, and collaborated with stakeholders to meet business requirements and continuously improve the platform."
       },
       {
@@ -60,6 +60,24 @@
         "description": "A comprehensive resource platform for the Cambodian developer community, providing open-source projects, technical documentation, and web development tools. It aims to foster collaboration and knowledge sharing among local programmers to advance the digital ecosystem in Cambodia.",
         "type": "Personal Project",
         "process": "Finished"
+      },
+      {
+        "name": "POS Cashier",
+        "description": "A real-time point-of-sale cashier system built for food and cafe stores. Features include order management, real-time updates via WebSocket, and a modern responsive UI. Currently deployed and running in production at a food and cafe store in sihanoukville. (Demo: username: cashier, password: cashier123)",
+        "type": "Side Project",
+        "process": "90% Complete"
+      },
+      {
+        "name": "POS Admin",
+        "description": "The admin dashboard for the POS Cashier system, providing store management, product catalog, sales analytics, and real-time order monitoring via WebSocket. Built for food and cafe store operations and currently running in production at sihanoukville. (Demo: username: admin, password: admin123)",
+        "type": "Side Project",
+        "process": "90% Complete"
+      },
+      {
+        "name": "Digital Menu",
+        "description": "A customer-facing digital menu portal for restaurants and cafes, allowing customers to browse the menu, view product details, and place orders directly from their devices. Part of the POS system and currently running in production at Sihanoukville.",
+        "type": "Side Project",
+        "process": "90% Complete"
       }
     ]
   },

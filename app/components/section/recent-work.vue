@@ -30,7 +30,7 @@ const projects = computed(() => {
             <UiTextGradient>{{ t('projects.title') }}</UiTextGradient>
         </div>
         <main >
-            <div class= " grid grid-cols-1 gap-30 p-10">
+            <div class="grid grid-cols-1 gap-16 sm:gap-20 md:gap-30 p-4 sm:p-6 md:p-10">
              <UiWorkCard v-for="(project, index) in projects" :key="index" :index="index" :project="project" />
             </div>
         </main>

@@ -23,10 +23,10 @@ const { t } = useI18n()
   class="
     flex items-center gap-4 sm:gap-10 sm:flex-row flex-col
     transition-transform duration-300 ease-out
-    hover:scale-105 hover:rotate-x-6 hover:rotate-y-3
+    md:hover:scale-105 md:hover:rotate-x-6 md:hover:rotate-y-3
   "
->        <div class="flex  text-white md:gap-5 flex-col md:w-1/2"
-            :class="index % 2 === 0 ? 'md:order-2 order-2 md:items-end md:hover:transform-3d md:hover:-rotate-3 md:hover:skew-x-2' : 'md:order-1 order-2 items-start hover:transform-3d hover:-rotate-3 hover:skew-x-2'">
+>        <div class="flex text-white md:gap-5 flex-col w-full md:w-1/2"
+            :class="index % 2 === 0 ? 'md:order-2 order-2 md:items-end md:hover:transform-3d md:hover:-rotate-3 md:hover:skew-x-2' : 'md:order-1 order-2 items-start md:hover:transform-3d md:hover:-rotate-3 md:hover:skew-x-2'">
             <div class="">
                  <h3 class="text-[10px] md:text-[12px] text-indigo-500">{{ project?.type }}</h3>
                 <h1 class="text-md md:text-[20px]">{{ project.name }}</h1>
@@ -62,7 +62,7 @@ const { t } = useI18n()
         </div>
 
         <div :class="index % 2 === 0 ? 'md:order-1 order-1 ' : 'md:order-2 order-1'"
-            class="md:hover:scale-105 md:rotate-1  md:w-1/2   relative  md:hover:skew-y-1 transition-all duration-300">
+            class="md:hover:scale-105 md:rotate-1 w-full md:w-1/2 relative md:hover:skew-y-1 transition-all duration-300">
             <a :href="project.demo" target="_blank">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/50 cursor-pointer z-10 hover:opacity-100 opacity-0">
                     <div class="flex justify-center items-center h-full">
@@ -70,7 +70,7 @@ const { t } = useI18n()
                     </div>
                 </div>
 
-                <div class="rounded-lg md:h-1/2  overflow-hidden bg-white">
+                <div class="rounded-lg overflow-hidden bg-white">
                     <NuxtImg :src="project.image" loading="lazy" alt="" class="w-full h-full object-cover"/>
                 </div>
             </a>

@@ -17,8 +17,8 @@ const jobs = computed(() => {
 
 <template>
     <section id="work" class="py-20 relative overflow-hidden">
-        <div class="rounded-full z-0 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 absolute
-               md:right-0 top-1/2 -translate-y-1/2 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 blur-3xl ">
+        <div class="rounded-full z-0 w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 absolute
+               md:right-0 top-1/2 -translate-y-1/2 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 blur-3xl">
         </div>
         <div class="absolute top-0 left-0 w-full h-full ">
             <div class="h-full w-full grid grid-cols-10 grid-rows-10">
@@ -41,7 +41,7 @@ const jobs = computed(() => {
                     </div>
 
                     <div
-                        class="flex md:bg-transparent bg-white/10 backdrop-blur-[5px]  md:p-5  max-md:rounded-lg p-5  md:gap-16 gap-5 md:px-20  px-5 text-white">
+                        class="flex md:bg-transparent bg-white/10 backdrop-blur-[5px] md:p-5 max-md:rounded-lg p-3 sm:p-5 md:gap-16 gap-5 md:px-20 px-3 sm:px-5 text-white">
                         <div class=" md:flex flex-1  flex-col  hidden  justify-center items-center">
                             <h1 class=" text-nowrap text-gray-400">
                                 {{ work.date }}

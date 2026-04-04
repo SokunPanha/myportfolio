@@ -1,7 +1,35 @@
 export const useFetchRecentWork = () => {
    
 const  projects = [
+ 
   {
+    name: "POS Cashier",
+    description: "A real-time point-of-sale cashier system built for food and cafe stores. Features include order management, real-time updates via WebSocket, and a modern responsive UI. Currently deployed and running in production at a food and cafe store in sihanoukville. (Demo: username: cashier, password: cashier123)",
+    demo: "https://pos-cashier-portal-dev-snowy.vercel.app/",
+    technologies: ["Nuxt.js", "TailwindCSS", "WebSocket", "NuxtUI"],
+    image: "/images/pos-cashier.png",
+    type: "Side Project",
+    process: "90% Complete",
+  },
+  {
+    name: "POS Admin",
+    description: "The admin dashboard for the POS Cashier system, providing store management, product catalog, sales analytics, and real-time order monitoring via WebSocket. Built for food and cafe store operations and currently running in production at sihanoukville. (Demo: username: admin, password: admin123)",
+    demo: "https://pos-admin-dev.vercel.app/",
+    technologies: ["Nuxt.js", "TailwindCSS", "WebSocket", "NuxtUI"],
+    image: "/images/pos-admin.png",
+    type: "Side Project",
+    process: "90% Complete",
+  },
+  {
+    name: "Digital Menu",
+    description: "A customer-facing digital menu portal for restaurants and cafes, allowing customers to browse the menu, view product details, and place orders directly from their devices. Part of the POS system and currently running in production at Sihanoukville.",
+    demo: "https://pos-store-portal-dev.vercel.app/store/168",
+    technologies: ["Nuxt.js", "TailwindCSS", "WebSocket", "NuxtUI"],
+    image: "/images/pos-store.png",
+    type: "Side Project",
+    process: "90% Complete",
+  },
+ {
     name: "DevToolbox",
     description: "A comprehensive collection of 100+ free, client-side developer tools for formatting, encoding, converting, and analyzing data. Features include JSON/XML formatters, Base64 encoders, hash generators, image compression, PDF tools, and more. All processing happens in the browser - your data never leaves your device.",
     demo: "https://toolbox.cambocoder.com/",
@@ -30,7 +58,6 @@ const  projects = [
     type: "Personal Project",
     process: "Finished",
   },
-
 ]
     return projects
 }

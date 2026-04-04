@@ -61,7 +61,7 @@ async function handleSubmit() {
 </script>
 
 <template>
-    <section class="px-10" id="contact">
+    <section class="px-4 sm:px-6 md:px-10" id="contact">
         <div class="flex justify-center items-center py-5">
             <UiTextGradient>{{ t('contact.title') }}</UiTextGradient>
         </div>
