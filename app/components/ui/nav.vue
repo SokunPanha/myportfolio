@@ -36,7 +36,7 @@ const navLinks = computed(() => [
 </script>
 
 <template>
-    <nav class="sticky top-0 z-50 w-full border-b border-white/[0.06] bg-[#06060f]/80 backdrop-blur-xl text-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/[0.06] bg-[#06060f]/80 backdrop-blur-xl text-white">
         <div class="flex items-center justify-between h-16 px-6 md:px-10">
             <!-- Logo -->
             <NuxtLink to="/" class="text-white font-semibold text-lg tracking-tight shrink-0">

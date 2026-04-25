@@ -23,7 +23,7 @@ const  projects = [
   {
     name: "Digital Menu",
     description: "A customer-facing digital menu portal for restaurants and cafes, allowing customers to browse the menu, view product details, and place orders directly from their devices. Part of the POS system and currently running in production at Sihanoukville.",
-    demo: "https://pos-store-portal-dev.vercel.app/store/168",
+    demo: "https://pos-store-portal-dev.vercel.app/store/41f3ead3-03c6-403b-b779-053807088cf2",
     technologies: ["Nuxt.js", "TailwindCSS", "WebSocket", "NuxtUI"],
     image: "/images/pos-store.png",
     type: "Side Project",
