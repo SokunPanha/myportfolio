@@ -18,6 +18,14 @@
   "about": {
     "label": "关于",
     "title": "关于我",
+    "skillsTitle": "技能与技术",
+    "groups": {
+      "frontend": "前端开发",
+      "backend": "后端开发",
+      "database": "数据库管理",
+      "versionControl": "版本控制",
+      "devops": "DevOps"
+    },
     "description": "我是一名前端网页开发工程师，在React、Next.js、Vue和Nuxt等现代框架方面拥有丰富的经验，专注于构建响应式、可扩展且用户友好的界面。我具备后端开发知识，主要使用NestJS，这使我能够有效地跨堆栈协作，构建良好集成的前端解决方案。我专门从事UI开发和设计系统，使用Tailwind CSS、Ant Design和shadcn/ui，并且能够熟练使用PostgreSQL、Docker、Git和Figma来交付干净、可投入生产的应用程序。"
   },
   "workExperience": {
