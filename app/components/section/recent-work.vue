@@ -4,7 +4,6 @@ const staticProjects = useFetchRecentWork()
 
 const { t, tm, rt } = useI18n()
 
-// Merge static data (images, links, technologies) with translated content
 const projects = computed(() => {
     const messages = tm('projects.items')
     if (!Array.isArray(messages)) return staticProjects
@@ -12,7 +11,6 @@ const projects = computed(() => {
     return staticProjects.map((project, index) => {
         const translated = messages[index]
         if (!translated) return project
-
         return {
             ...project,
             name: rt(translated.name),
@@ -25,14 +23,22 @@ const projects = computed(() => {
 </script>
 
 <template>
-    <section class="py-20" >
-        <div class="flex justify-center items-center">
-            <UiTextGradient>{{ t('projects.title') }}</UiTextGradient>
-        </div>
-        <main >
-            <div class="grid grid-cols-1 gap-16 sm:gap-20 md:gap-30 p-4 sm:p-6 md:p-10">
-             <UiWorkCard v-for="(project, index) in projects" :key="index" :index="index" :project="project" />
+    <section class="py-24 px-6 md:px-10">
+        <UiReveal>
+            <div class="flex flex-col items-center gap-3 text-center mb-16">
+                <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('projects.label') }}</span>
+                <UiTextGradient>{{ t('projects.title') }}</UiTextGradient>
             </div>
-        </main>
+        </UiReveal>
+
+        <div class="flex flex-col gap-20 md:gap-28">
+            <UiReveal
+                v-for="(project, index) in projects"
+                :key="index"
+                :from="index % 2 === 0 ? 'left' : 'right'"
+            >
+                <UiWorkCard :index="index" :project="project" />
+            </UiReveal>
+        </div>
     </section>
 </template>

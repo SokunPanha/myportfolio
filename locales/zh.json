@@ -10,13 +10,18 @@
     "greeting": "你好，我是",
     "title": "前端开发工程师",
     "description": "我是一名充满热情的软件开发者，拥有2年前端开发经验和1年后端开发经验。我喜欢构建现代化、用户友好的界面，以及开发可靠、可扩展的后端系统。我始终渴望学习新技术，并通过实际项目提升自己的技能。",
-    "contactBtn": "联系我"
+    "contactBtn": "联系我",
+    "availableForWork": "可接受工作机会",
+    "viewMyWork": "查看我的作品",
+    "role": "全栈开发工程师"
   },
   "about": {
+    "label": "关于",
     "title": "关于我",
     "description": "我是一名前端网页开发工程师，在React、Next.js、Vue和Nuxt等现代框架方面拥有丰富的经验，专注于构建响应式、可扩展且用户友好的界面。我具备后端开发知识，主要使用NestJS，这使我能够有效地跨堆栈协作，构建良好集成的前端解决方案。我专门从事UI开发和设计系统，使用Tailwind CSS、Ant Design和shadcn/ui，并且能够熟练使用PostgreSQL、Docker、Git和Figma来交付干净、可投入生产的应用程序。"
   },
   "workExperience": {
+    "label": "经历",
     "title": "工作经历",
     "jobs": [
       {
@@ -32,16 +37,59 @@
         "description": "从事前端和后端开发工作，使用最新技术构建学生门户和配套管理功能，确保可扩展性、性能和流畅的用户体验。此外，领导并指导实习生开发Sala Tech旗下的免费工具项目，指导他们完成系统设计、实施和最佳开发实践，成功交付项目。"
       },
       {
-        "title": "前端开发工程师",
-        "company": "TSD - Technology Solution Development",
-        "date": "2024年6月 - 2024年7月",
-        "description": "使用当代前端技术为TSD开发现代单页网页应用程序，为餐厅运营提供响应式、高性能的数字菜单解决方案。实现交互式UI组件，优化应用程序以实现快速加载时间，确保跨设备兼容性，并与利益相关者合作以满足功能需求并增强整体用户体验。"
+        "title": "导师",
+        "company": "Technovation Girls Global Competition",
+        "date": "2022年11月 - 2024年11月",
+        "description": "负责指导和培训女学生掌握编程与创业技能，带领她们参加全球性竞赛。"
+      }
+    ]
+  },
+  "education": {
+    "label": "教育与培训",
+    "title": "学术背景",
+    "educationLabel": "教育经历",
+    "trainingLabel": "培训经历",
+    "degrees": [
+      {
+        "degree": "计算机科学学士学位",
+        "institution": "金边皇家大学 (RUPP)",
+        "date": "2021年4月 - 2024年5月",
+        "description": "毕业于金边皇家大学计算机科学专业。"
+      },
+      {
+        "degree": "英语文学学士学位",
+        "institution": "国家管理大学 (NUM)",
+        "date": "2021年4月 - 2024年5月",
+        "description": "毕业于国家管理大学英语文学专业。"
+      }
+    ],
+    "trainings": [
+      {
+        "course": "大数据分析培训课程",
+        "institution": "金边皇家大学（三星赞助）",
+        "date": "2024年1月 - 2025年1月",
+        "description": "掌握了使用高级工具和技术处理和分析大型数据集的技能。"
+      },
+      {
+        "course": "iOS开发培训课程",
+        "institution": "ADITI Academy（邮电部赞助）",
+        "date": "2024年3月 - 2024年8月",
+        "description": "掌握了Swift编程和iOS应用开发技能，包括UIKit。"
+      },
+      {
+        "course": "Python完整课程",
+        "institution": "金边皇家大学（三星赞助）",
+        "date": "2023年5月 - 2023年11月",
+        "description": "深入学习Python编程及其在数据科学和自动化中的应用。"
       }
     ]
   },
   "projects": {
+    "label": "作品集",
     "title": "近期作品",
     "viewProject": "查看项目",
+    "liveDemo": "在线演示",
+    "github": "GitHub",
     "items": [
     
       {
@@ -85,6 +133,8 @@
   "contact": {
     "title": "联系方式",
     "heading": "与我联系",
+    "phone": "电话",
+    "telegram": "电报",
     "description": "我始终对新机会和合作持开放态度。无论您有项目想法还是只是想聊聊，请随时与我联系！",
     "form": {
       "name": "姓名",

@@ -1,12 +1,12 @@
 <script setup>
-
-defineProps({
-    path: String,
-})
+defineProps({ path: String })
 </script>
 
 <template>
-    <NuxtLink :to="path" class="p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full px-6 sm:px-10 hover:scale-110 transition-all duration-100! text-sm sm:text-base">
+    <NuxtLink
+        :to="path"
+        class="inline-flex items-center px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-px"
+    >
         <slot />
     </NuxtLink>
 </template>

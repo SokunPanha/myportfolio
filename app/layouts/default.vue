@@ -1,12 +1,9 @@
 <template>
-    
-    <main class="bg-[#13052c] p-2 ">
-    
-     <div class="md:max-w-[1080px] w-full mx-auto h-full">
+    <main class="bg-[#06060f] min-h-screen">
+        <div class="max-w-[1100px] w-full mx-auto">
             <UiNav />
-
-        <slot />
-        <UiFooter/>
-     </div>
+            <slot />
+            <UiFooter />
+        </div>
     </main>
 </template>

@@ -16,53 +16,42 @@ const jobs = computed(() => {
 </script>
 
 <template>
-    <section id="work" class="py-20 relative overflow-hidden">
-        <div class="rounded-full z-0 w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 absolute
-               md:right-0 top-1/2 -translate-y-1/2 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 blur-3xl">
-        </div>
-        <div class="absolute top-0 left-0 w-full h-full ">
-            <div class="h-full w-full grid grid-cols-10 grid-rows-10">
-                <div v-for="_ in 100" class="border border-[#ffffff]/20 opacity-15  "></div>
+    <section id="work" class="py-24 px-6 md:px-10 relative overflow-hidden">
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/8 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <UiReveal>
+            <div class="flex flex-col items-center gap-3 text-center mb-16">
+                <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('workExperience.label') }}</span>
+                <UiTextGradient>{{ t('workExperience.title') }}</UiTextGradient>
             </div>
-        </div>
-        <div class="flex justify-center items-center h-full">
-            <UiTextGradient>{{ t('workExperience.title') }}</UiTextGradient>
-        </div>
+        </UiReveal>
 
-        <main class="flex flex-col md:gap-5 gap-0 mt-10 ">
-            <div v-for="(work, index) in jobs" :key="index">
-                <div class="flex justify-center md:hidden  h-[50px]" v-if="index !== jobs.length && index !== 0">
-                    <div class="w-[5px] bg-gradient-to-b from-indigo-500  to-pink-500/20 z-10">
+        <div class="relative max-w-2xl mx-auto">
+            <div class="absolute left-5 md:left-6 top-2 bottom-2 w-px bg-gradient-to-b from-indigo-500/40 via-purple-500/20 to-transparent pointer-events-none"></div>
 
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class=" z-10 absolute md:hidden text-white top-4 right-2 bg-black/40 px-2">{{ work.date }}
-                    </div>
+            <div class="flex flex-col gap-8">
+                <UiReveal
+                    v-for="(work, index) in jobs"
+                    :key="index"
+                    :delay="index * 120"
+                    from="left"
+                >
+                    <div class="relative pl-14 md:pl-16">
+                        <div class="absolute left-[15px] md:left-[18px] top-5 w-3 h-3 rounded-full bg-indigo-500 border-2 border-[#06060f] shadow-md shadow-indigo-500/50"></div>
 
-                    <div
-                        class="flex md:bg-transparent bg-white/10 backdrop-blur-[5px] md:p-5 max-md:rounded-lg p-3 sm:p-5 md:gap-16 gap-5 md:px-20 px-3 sm:px-5 text-white">
-                        <div class=" md:flex flex-1  flex-col  hidden  justify-center items-center">
-                            <h1 class=" text-nowrap text-gray-400">
-                                {{ work.date }}
-                            </h1>
-                            <div class=" h-full flex items-center justify-center">
-                                <div
-                                    class="h-[76%] md:h-[80%] w-[2px] rounded-4xl  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-
+                        <div class="bg-[#0d0d20] border border-white/[0.06] rounded-2xl p-5 hover:border-indigo-500/20 transition-colors duration-300">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <div>
+                                    <h3 class="font-semibold text-white text-base">{{ work.company }}</h3>
+                                    <p class="text-indigo-400 text-sm mt-0.5">{{ work.title }}</p>
                                 </div>
+                                <span class="text-xs text-white/35 bg-white/[0.04] px-2.5 py-1 rounded-full border border-white/[0.06] whitespace-nowrap">{{ work.date }}</span>
                             </div>
-                        </div>
-
-                        <div class="md:w-2/3 w-full">
-                            <h1 class="text-base md:text-lg font-bold text-orange-300 max-md:w-2/3">{{ work.company }}</h1>
-                            <h2 class="text-sm md:text-base text-indigo-300 font-bold">{{ work.title }}</h2>
-                            <p class="text-sm md:text-base text-white/70 text-justify">{{ work.description }}</p>
+                            <p class="text-white/50 text-sm leading-relaxed">{{ work.description }}</p>
                         </div>
                     </div>
-                </div>
-
+                </UiReveal>
             </div>
-        </main>
+        </div>
     </section>
 </template>
