@@ -1,7 +1,10 @@
 <template>
-    <main class="bg-[#06060f] min-h-screen">
+    <main class="bg-surface min-h-screen">
+        <ClientOnly>
+            <UiThreeBackground />
+        </ClientOnly>
         <UiNav />
-        <div class="max-w-[1100px] w-full mx-auto pt-16">
+        <div class="relative max-w-[1100px] w-full mx-auto pt-16">
             <slot />
             <UiFooter />
         </div>

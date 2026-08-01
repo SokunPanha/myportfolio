@@ -54,94 +54,83 @@ const versionControlIcon = 'M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.0
   <section class="py-24 px-6 md:px-10" id="about">
     <!-- Section Header -->
     <UiReveal>
-      <div class="flex flex-col items-center gap-3 text-center mb-16">
-        <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('about.label') }}</span>
-        <UiTextGradient>{{ t('about.title') }}</UiTextGradient>
-        <p class="text-sm md:text-base text-white/45 max-w-lg leading-relaxed">
-          {{ t('about.description') }}
-        </p>
-      </div>
-    </UiReveal>
-
-    <!-- Orbit -->
-    <UiReveal :delay="120">
-      <div class="flex justify-center p-4 sm:p-6 md:p-10 max-md:overflow-hidden">
-        <div class="relative">
-          <div
-            class="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px]
-                   rounded-full animate-[spin_35s_linear_infinite]
-                   [--orbit-radius:130px] md:[--orbit-radius:170px]"
-          >
-            <div
-              v-for="(image, index) in aboutMe.skills"
-              :key="image"
-              class="absolute top-1/2 left-1/2 w-10 h-10 md:w-14 md:h-14 -translate-x-1/2 -translate-y-1/2"
-              :style="{
-                transform: `
-                  rotate(${index * (360 / aboutMe.skills.length)}deg)
-                  translate(var(--orbit-radius))
-                  rotate(-${index * (360 / aboutMe.skills.length)}deg)
-                `
-              }"
-            >
-              <div class="w-full h-full rounded-xl bg-[#0d0d20] border border-white/[0.08] p-2 flex items-center justify-center shadow-lg shadow-black/40">
-                <img :src="`/images/${image}`" :alt="image" class="w-full h-full object-contain" />
-              </div>
-            </div>
-
-            <div class="absolute left-1/2 top-1/2 w-1/2 h-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-indigo-600/25 animate-pulse pointer-events-none"></div>
-          </div>
-
-          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-            <img src="/images/meditation.webp" alt="Meditation" class="w-20 h-20 md:w-28 md:h-28" />
-          </div>
+      <div class="flex items-end gap-6 mb-12">
+        <div class="flex flex-col gap-2">
+          <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('about.label') }}</span>
+          <UiTextGradient>{{ t('about.title') }}</UiTextGradient>
         </div>
+        <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-indigo-500/30 to-transparent mb-3"></div>
       </div>
     </UiReveal>
 
-    <!-- Skill Groups -->
-    <div class="mt-8">
-      <UiReveal>
-        <p class="text-center text-sm font-medium text-white/40 tracking-widest uppercase mb-10">{{ t('about.skillsTitle') }}</p>
+    <!-- Bento grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:grid-flow-row-dense gap-4">
+      <!-- Description tile -->
+      <UiReveal from="left">
+        <div v-tilt class="bg-panel/55 backdrop-blur-xl border border-ink/[0.06] rounded-2xl p-6 h-full shadow-xl shadow-black/20 flex flex-col justify-center gap-4">
+          <div class="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+            <svg class="w-4.5 h-4.5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <p class="text-sm md:text-base text-ink/45 leading-relaxed">
+            {{ t('about.description') }}
+          </p>
+          <p class="text-xs font-medium text-ink/30 tracking-widest uppercase">{{ t('about.skillsTitle') }}</p>
+        </div>
       </UiReveal>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <UiReveal
-          v-for="(group, index) in aboutMe.skillGroups"
-          :key="group.key"
-          :delay="index * 80"
-        >
-          <div
-            class="bg-[#0d0d20] border rounded-2xl p-5 transition-colors duration-300 h-full"
-            :class="colorClasses[groupColors[group.key]].border"
-          >
-            <!-- Group header -->
-            <div class="flex items-center gap-2.5 mb-4">
-              <div
-                class="w-7 h-7 rounded-lg border flex items-center justify-center shrink-0"
-                :class="colorClasses[groupColors[group.key]].icon"
-              >
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" :d="groupIcons[group.key]" />
-                </svg>
-              </div>
-              <h3 class="text-sm font-semibold text-white/80">{{ t(`about.groups.${group.key}`) }}</h3>
-            </div>
+      <!-- 3D Skill Sphere feature tile -->
+      <UiReveal :delay="100" class="lg:col-span-2 lg:row-span-2">
+        <div class="relative bg-panel/40 backdrop-blur-xl border border-ink/[0.06] rounded-2xl h-full shadow-xl shadow-black/20 flex items-center justify-center overflow-hidden p-6">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+          <ClientOnly>
+            <UiSkillSphere :skills="aboutMe.skills" />
+            <template #fallback>
+              <div class="w-[300px] h-[300px] md:w-[420px] md:h-[420px]"></div>
+            </template>
+          </ClientOnly>
+        </div>
+      </UiReveal>
 
-            <!-- Skill tags -->
-            <div class="flex flex-wrap gap-2">
-              <span
-                v-for="skill in group.skills"
-                :key="skill"
-                class="text-xs px-2.5 py-1 rounded-lg border font-medium"
-                :class="colorClasses[groupColors[group.key]].badge"
-              >
-                {{ skill }}
-              </span>
+      <!-- Skill group tiles -->
+      <UiReveal
+        v-for="(group, index) in aboutMe.skillGroups"
+        :key="group.key"
+        :delay="index * 80"
+        :class="{ 'lg:col-span-2': group.key === 'frontend' || group.key === 'devops' }"
+      >
+        <div
+          v-tilt
+          class="bg-panel/55 backdrop-blur-xl border rounded-2xl p-5 transition-colors duration-300 h-full shadow-xl shadow-black/20"
+          :class="colorClasses[groupColors[group.key]].border"
+        >
+          <!-- Group header -->
+          <div class="flex items-center gap-2.5 mb-4">
+            <div
+              class="w-7 h-7 rounded-lg border flex items-center justify-center shrink-0"
+              :class="colorClasses[groupColors[group.key]].icon"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" :d="groupIcons[group.key]" />
+              </svg>
             </div>
+            <h3 class="text-sm font-semibold text-ink/80">{{ t(`about.groups.${group.key}`) }}</h3>
           </div>
-        </UiReveal>
-      </div>
+
+          <!-- Skill tags -->
+          <div class="flex flex-wrap gap-2">
+            <span
+              v-for="skill in group.skills"
+              :key="skill"
+              class="text-xs px-2.5 py-1 rounded-lg border font-medium"
+              :class="colorClasses[groupColors[group.key]].badge"
+            >
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+      </UiReveal>
     </div>
   </section>
 </template>

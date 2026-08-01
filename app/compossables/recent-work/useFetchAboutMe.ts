@@ -18,7 +18,9 @@ export function useFetchAboutMe() {
             'shadcn.webp',
             'nestjs.webp',
             'postgres.webp',
-            'docker.webp'
+            'docker.webp',
+            'rabbitmq.svg',
+            'websocket.svg'
         ],
         skillGroups: [
             {
@@ -27,7 +29,7 @@ export function useFetchAboutMe() {
             },
             {
                 key: 'backend',
-                skills: ['Python', 'Node.js & Express', 'NestJS', 'RESTful API', 'TypeScript', 'OOP']
+                skills: ['Python', 'Node.js & Express', 'NestJS', 'RESTful API', 'TypeScript', 'OOP', 'RabbitMQ', 'WebSocket']
             },
             {
                 key: 'database',

@@ -25,19 +25,23 @@ const projects = computed(() => {
 <template>
     <section class="py-24 px-6 md:px-10">
         <UiReveal>
-            <div class="flex flex-col items-center gap-3 text-center mb-16">
-                <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('projects.label') }}</span>
-                <UiTextGradient>{{ t('projects.title') }}</UiTextGradient>
+            <div class="flex items-end gap-6 mb-12">
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('projects.label') }}</span>
+                    <UiTextGradient>{{ t('projects.title') }}</UiTextGradient>
+                </div>
+                <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-indigo-500/30 to-transparent mb-3"></div>
             </div>
         </UiReveal>
 
-        <div class="flex flex-col gap-20 md:gap-28">
+        <div class="grid md:grid-cols-2 gap-6">
             <UiReveal
                 v-for="(project, index) in projects"
                 :key="index"
-                :from="index % 2 === 0 ? 'left' : 'right'"
+                :delay="(index % 2) * 100"
+                :class="{ 'md:mt-12': index % 2 === 1 }"
             >
-                <UiWorkCard :index="index" :project="project" />
+                <UiWorkCard :index="index" :project="project" class="h-full" />
             </UiReveal>
         </div>
     </section>

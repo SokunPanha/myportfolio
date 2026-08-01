@@ -8,8 +8,10 @@
   },
   "home": {
     "greeting": "你好，我是",
-    "title": "前端开发工程师",
-    "description": "我是一名充满热情的软件开发者，拥有2年前端开发经验和1年后端开发经验。我喜欢构建现代化、用户友好的界面，以及开发可靠、可扩展的后端系统。我始终渴望学习新技术，并通过实际项目提升自己的技能。",
+    "title": "全栈开发工程师",
+    "yearSingular": "年",
+    "yearPlural": "年",
+    "description": "我是一名充满热情的软件开发者，拥有{frontendYears}年前端开发经验和{backendYears}年后端开发经验。我喜欢构建现代化、用户友好的界面，以及开发可靠、可扩展的后端系统。我始终渴望学习新技术，并通过实际项目提升自己的技能。",
     "contactBtn": "联系我",
     "availableForWork": "可接受工作机会",
     "viewMyWork": "查看我的作品",
@@ -31,6 +33,15 @@
   "workExperience": {
     "label": "经历",
     "title": "工作经历",
+    "counterTitle": "从业时间累计",
+    "counter": {
+      "years": "年",
+      "months": "月",
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒"
+    },
     "jobs": [
       {
         "title": "前端开发工程师",
@@ -102,19 +113,19 @@
     
       {
         "name": "POS Cashier",
-        "description": "一个为餐饮和咖啡店打造的实时收银系统。功能包括订单管理、通过WebSocket实时更新以及现代响应式界面。目前已部署并在西哈努克省的一家餐饮咖啡店投入生产运营。(Demo: username: cashier, password: cashier123)",
+        "description": "一个为餐饮和咖啡店打造的实时收银系统。功能包括订单管理、通过WebSocket实时更新以及现代响应式界面。目前已部署并在金边的咖啡店 Song Food & Coffee 投入生产运营。(Demo: username: cashier, password: cashier123)",
         "type": "业余项目",
         "process": "完成90%"
       },
       {
         "name": "POS Admin",
-        "description": "POS收银系统的管理后台，提供店铺管理、产品目录、销售分析以及通过WebSocket实时监控订单。专为餐饮和咖啡店运营而构建，目前已在西哈努克省投入生产运营。(Demo: username: admin, password: admin123)",
+        "description": "POS收银系统的管理后台，提供店铺管理、产品目录、销售分析以及通过WebSocket实时监控订单。专为餐饮和咖啡店运营而构建，目前已在金边的咖啡店 Song Food & Coffee 投入生产运营。(Demo: username: admin, password: admin123)",
         "type": "业余项目",
         "process": "完成90%"
       },
       {
         "name": "Digital Menu",
-        "description": "面向顾客的餐厅数字菜单门户，允许顾客浏览菜单、查看产品详情并直接从设备上下单。作为POS系统的一部分，目前已在西哈努克市投入生产运营。",
+        "description": "面向顾客的餐厅数字菜单门户，允许顾客浏览菜单、查看产品详情并直接从设备上下单。作为POS系统的一部分，目前已在金边的咖啡店 Song Food & Coffee 投入生产运营。",
         "type": "业余项目",
         "process": "完成90%"
       },

@@ -8,8 +8,10 @@
   },
   "home": {
     "greeting": "Hi, I'm",
-    "title": "Front-end Developer",
-    "description": "I'm a passionate software developer with 2 years of experience as a Frontend Developer and 1 year of experience as a Backend Developer. I enjoy building modern, user-friendly interfaces and developing reliable, scalable backend systems. I'm always eager to learn new technologies and improve my skills through real-world projects.",
+    "title": "Full Stack Developer",
+    "description": "I'm a passionate software developer with {frontendYears} years of experience as a Frontend Developer and {backendYears} {backendYearUnit} of experience as a Backend Developer. I enjoy building modern, user-friendly interfaces and developing reliable, scalable backend systems. I'm always eager to learn new technologies and improve my skills through real-world projects.",
+    "yearSingular": "year",
+    "yearPlural": "years",
     "contactBtn": "Contact Me",
     "availableForWork": "Available for work",
     "viewMyWork": "View my work",
@@ -31,6 +33,15 @@
   "workExperience": {
     "label": "Experience",
     "title": "Work Experience",
+    "counterTitle": "Working in the industry for",
+    "counter": {
+      "years": "Years",
+      "months": "Months",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
     "jobs": [
       {
         "title": "Frontend Developer",
@@ -102,19 +113,19 @@
      
       {
         "name": "POS Cashier",
-        "description": "A real-time point-of-sale cashier system built for food and cafe stores. Features include order management, real-time updates via WebSocket, and a modern responsive UI. Currently deployed and running in production at a food and cafe store in sihanoukville. (Demo: username: cashier, password: cashier123)",
+        "description": "A real-time point-of-sale cashier system built for food and cafe stores. Features include order management, real-time updates via WebSocket, and a modern responsive UI. Currently deployed and running in production at Song Food & Coffee, a coffee shop in Phnom Penh. (Demo: username: cashier, password: cashier123)",
         "type": "Side Project",
         "process": "90% Complete"
       },
       {
         "name": "POS Admin",
-        "description": "The admin dashboard for the POS Cashier system, providing store management, product catalog, sales analytics, and real-time order monitoring via WebSocket. Built for food and cafe store operations and currently running in production at sihanoukville. (Demo: username: admin, password: admin123)",
+        "description": "The admin dashboard for the POS Cashier system, providing store management, product catalog, sales analytics, and real-time order monitoring via WebSocket. Built for food and cafe store operations and currently running in production at Song Food & Coffee in Phnom Penh. (Demo: username: admin, password: admin123)",
         "type": "Side Project",
         "process": "90% Complete"
       },
       {
         "name": "Digital Menu",
-        "description": "A customer-facing digital menu portal for restaurants and cafes, allowing customers to browse the menu, view product details, and place orders directly from their devices. Part of the POS system and currently running in production at Sihanoukville.",
+        "description": "A customer-facing digital menu portal for restaurants and cafes, allowing customers to browse the menu, view product details, and place orders directly from their devices. Part of the POS system and currently running in production at Song Food & Coffee in Phnom Penh.",
         "type": "Side Project",
         "process": "90% Complete"
       },

@@ -58,19 +58,24 @@ async function handleSubmit() {
 <template>
     <section class="py-24 px-6 md:px-10" id="contact">
         <UiReveal>
-            <div class="flex flex-col items-center gap-3 text-center mb-16">
-                <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('contact.title') }}</span>
-                <UiTextGradient>{{ t('contact.title') }}</UiTextGradient>
+            <div class="flex items-end gap-6 mb-12 max-w-4xl mx-auto">
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs font-medium tracking-widest uppercase text-indigo-400">{{ t('contact.title') }}</span>
+                    <UiTextGradient>{{ t('contact.title') }}</UiTextGradient>
+                </div>
+                <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-indigo-500/30 to-transparent mb-3"></div>
             </div>
         </UiReveal>
 
-        <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-start max-w-4xl mx-auto">
+        <div class="relative max-w-4xl mx-auto rounded-3xl p-px bg-gradient-to-br from-indigo-500/30 via-ink/[0.06] to-purple-500/30 shadow-2xl shadow-black/40">
+        <div class="relative grid md:grid-cols-2 gap-12 md:gap-16 items-start rounded-[calc(1.5rem-1px)] bg-panel/70 backdrop-blur-2xl p-6 md:p-10 overflow-hidden">
+        <div class="absolute -top-16 -right-16 w-64 h-64 bg-indigo-600/15 rounded-full blur-[90px] pointer-events-none"></div>
             <!-- Left: Info -->
             <UiReveal from="left">
                 <div class="flex flex-col gap-8">
                     <div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-3">{{ t('contact.heading') }}</h3>
-                        <p class="text-white/45 text-base leading-relaxed">{{ t('contact.description') }}</p>
+                        <h3 class="text-xl md:text-2xl font-semibold text-ink mb-3">{{ t('contact.heading') }}</h3>
+                        <p class="text-ink/45 text-base leading-relaxed">{{ t('contact.description') }}</p>
                     </div>
 
                     <div class="flex flex-col gap-4">
@@ -81,20 +86,20 @@ async function handleSubmit() {
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-xs text-white/25 mb-0.5">{{ t('contact.phone') }}</p>
-                                <p class="text-sm text-white/60 group-hover:text-white transition-colors duration-200">+855 011 816 899</p>
+                                <p class="text-xs text-ink/25 mb-0.5">{{ t('contact.phone') }}</p>
+                                <p class="text-sm text-ink/60 group-hover:text-ink transition-colors duration-200">+855 011 816 899</p>
                             </div>
                         </a>
 
-                        <a href="https://t.me/sokunpanha168" target="_blank" class="flex items-center gap-4 group">
+                        <a href="https://t.me/sokunpanha16899" target="_blank" class="flex items-center gap-4 group">
                             <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors duration-200 shrink-0">
                                 <svg class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-xs text-white/25 mb-0.5">{{ t('contact.telegram') }}</p>
-                                <p class="text-sm text-white/60 group-hover:text-white transition-colors duration-200">@sokunpanha168</p>
+                                <p class="text-xs text-ink/25 mb-0.5">{{ t('contact.telegram') }}</p>
+                                <p class="text-sm text-ink/60 group-hover:text-ink transition-colors duration-200">@sokunpanha16899</p>
                             </div>
                         </a>
                     </div>
@@ -105,30 +110,30 @@ async function handleSubmit() {
             <UiReveal from="right" :delay="100">
                 <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
                     <div class="flex flex-col gap-1.5">
-                        <label class="text-xs font-medium text-white/35">{{ t('contact.form.name') }}</label>
+                        <label class="text-xs font-medium text-ink/35">{{ t('contact.form.name') }}</label>
                         <input
                             v-model="form.name"
                             type="text"
                             required
-                            class="bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-indigo-500/50 focus:bg-white/[0.06] transition-colors duration-200"
+                            class="bg-ink/[0.04] border border-ink/[0.08] rounded-xl px-4 py-3 text-sm text-ink outline-none focus:border-indigo-500/50 focus:bg-ink/[0.06] transition-colors duration-200"
                         />
                     </div>
                     <div class="flex flex-col gap-1.5">
-                        <label class="text-xs font-medium text-white/35">{{ t('contact.form.email') }}</label>
+                        <label class="text-xs font-medium text-ink/35">{{ t('contact.form.email') }}</label>
                         <input
                             v-model="form.email"
                             type="email"
                             required
-                            class="bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-indigo-500/50 focus:bg-white/[0.06] transition-colors duration-200"
+                            class="bg-ink/[0.04] border border-ink/[0.08] rounded-xl px-4 py-3 text-sm text-ink outline-none focus:border-indigo-500/50 focus:bg-ink/[0.06] transition-colors duration-200"
                         />
                     </div>
                     <div class="flex flex-col gap-1.5">
-                        <label class="text-xs font-medium text-white/35">{{ t('contact.form.message') }}</label>
+                        <label class="text-xs font-medium text-ink/35">{{ t('contact.form.message') }}</label>
                         <textarea
                             v-model="form.message"
                             rows="5"
                             required
-                            class="bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-indigo-500/50 focus:bg-white/[0.06] transition-colors duration-200 resize-none"
+                            class="bg-ink/[0.04] border border-ink/[0.08] rounded-xl px-4 py-3 text-sm text-ink outline-none focus:border-indigo-500/50 focus:bg-ink/[0.06] transition-colors duration-200 resize-none"
                         ></textarea>
                     </div>
 
@@ -151,6 +156,7 @@ async function handleSubmit() {
                     </button>
                 </form>
             </UiReveal>
+        </div>
         </div>
     </section>
 </template>

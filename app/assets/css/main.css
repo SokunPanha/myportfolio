@@ -1,7 +1,26 @@
 @import "tailwindcss";
 
+/* Theme tokens — dark is the default; .light on <html> swaps the palette */
+@theme {
+    --color-surface: #06060f;
+    --color-panel: #0d0d20;
+    --color-ink: #ffffff;
+}
+
+.light {
+    --color-surface: #f3f4fa;
+    --color-panel: #ffffff;
+    --color-ink: #131333;
+}
+
+/* White logos need inverting on light panels */
+.light img[src*="websocket"] {
+    filter: invert(1);
+}
+
 html, body {
     overflow-x: hidden;
+    background: var(--color-surface);
 }
 
 html {
@@ -25,21 +44,36 @@ html {
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #06060f; }
+::-webkit-scrollbar-track { background: var(--color-surface); }
 ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #6366f1, #a855f7); border-radius: 2px; }
 
-/* Per-element scroll reveal */
+/* Per-element scroll reveal — 3D perspective entrances */
 .reveal-item {
     opacity: 0;
-    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
 }
 .reveal-item.revealed {
     opacity: 1;
-    transform: none;
+    transform: perspective(900px) translate3d(0, 0, 0) rotateX(0) rotateY(0) scale(1);
 }
-.reveal-from-bottom { transform: translateY(28px); }
-.reveal-from-left   { transform: translateX(-28px); }
-.reveal-from-right  { transform: translateX(28px); }
+.reveal-from-bottom {
+    transform: perspective(900px) translate3d(0, 48px, -60px) rotateX(14deg) scale(0.96);
+    transform-origin: center bottom;
+}
+.reveal-from-left {
+    transform: perspective(900px) translate3d(-48px, 0, -60px) rotateY(-12deg);
+    transform-origin: left center;
+}
+.reveal-from-right {
+    transform: perspective(900px) translate3d(48px, 0, -60px) rotateY(12deg);
+    transform-origin: right center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-item { transition: opacity 0.5s ease; }
+    .reveal-from-bottom, .reveal-from-left, .reveal-from-right { transform: none; }
+}
 
 /* Hero Animations */
 @keyframes fadeInUp {
